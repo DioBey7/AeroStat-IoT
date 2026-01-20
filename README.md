@@ -1,13 +1,14 @@
 # 🛡️ AeroStat: Endüstriyel IoT Güvenlik ve Otonom Yaşam Destek Sistemi
 
-![Python](https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python)
-![ESP8266](https://img.shields.io/badge/Donanım-NodeMCU-lightgrey?style=for-the-badge&logo=arduino)
-![InfluxDB](https://img.shields.io/badge/Veritabanı-InfluxDB-28B766?style=for-the-badge&logo=influxdb)
-![Telegram](https://img.shields.io/badge/API-Telegram_Bot-24A1DE?style=for-the-badge&logo=telegram)
-![License](https://img.shields.io/badge/Lisans-MIT-green.svg)
+![Python](https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python&logoColor=white)
+![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
+![Arduino IDE](https://img.shields.io/badge/Arduino_IDE-00979D?style=for-the-badge&logo=arduino&logoColor=white)
+![ESP8266](https://img.shields.io/badge/Donanım-NodeMCU-lightgrey?style=for-the-badge&logo=arduino&logoColor=white)
+![InfluxDB](https://img.shields.io/badge/Veritabanı-InfluxDB-28B766?style=for-the-badge&logo=influxdb&logoColor=white)
+![Telegram](https://img.shields.io/badge/API-Telegram_Bot-24A1DE?style=for-the-badge&logo=telegram&logoColor=white)
+![License](https://img.shields.io/badge/Lisans-MIT-green.svg?style=for-the-badge)
 
 **AeroStat**, basit bir sensör okuma projesinin ötesinde; otonom karar verme yeteneğine sahip, hata toleranslı (fault-tolerant) ve acil durum protokolleri içeren uçtan uca (end-to-end) bir **IoT Güvenlik Sistemidir.**
-
 Gömülü sistemleri modern bulut teknolojileriyle birleştiren bu proje, ortam verilerini sadece kaydetmekle kalmaz; **analiz eder, yorumlar ve hayati tehlike durumlarında inisiyatif alarak acil müdahale süreçlerini (112 Arama vb.) başlatır.**
 
 ---
@@ -95,10 +96,11 @@ Bot ile etkileşime geçmek için Telegram üzerinden aşağıdaki komutları ku
 Projenin çalışması için aşağıdaki donanım bağlantılarını yapmanız ve yazılım parametrelerini ayarlamanız gerekmektedir.
 
 #### a. Gerekli Malzemeler (BOM)
+
 * **Mikrodenetleyici:** NodeMCU v3 (ESP8266) veya ESP32.
 * **Sensör:** DHT22 (Sıcaklık ve Nem Sensörü) - *DHT11 kullanacaksanız kodda `DHTTYPE` değiştirilmelidir.*
 * **Aktüatör (Opsiyonel):** 5V Röle Modülü (Fan, Isıtıcı veya Lamba kontrolü için).
-* **Bağlantı:** Jumper kablolar, Breadboard ve Veri aktarımlı Micro-USB kablo.
+* **Bağlantı:** Jumper kablolar, Breadboard (Ben kullanmadım ama devrenin daha stabil durması için büyük bir breadboard veya iki küçük breadboard ile devreyi kurabilirsiniz, bir tane küçük breadboard ESP8266 için yetersiz kalıyor.) ve Veri aktarımlı Micro-USB kablo.
 
 #### b. Devre Bağlantı Şeması (Pinout)
 
@@ -161,6 +163,20 @@ src/bridge.py dosyasındaki TOKEN ve ID alanlarını güncelleyin.
 ```bash
 python src/bridge.py
 ```
+
+## 📸 Proje Görselleri
+
+Sistemin canlı izleme paneli ve acil durum anında verdiği tepkiler:
+
+| 📊 Canlı Analitik (Grafana) | 🔥 Kritik Acil Durum Protokolü |
+| :---: | :---: |
+| <img src="screenshots/grafana.png" width="100%"> | <img src="screenshots/test4.jpeg" width="100%"> |
+| *Anlık sıcaklık, nem ve sistem sağlığı takibi* | *Yangın algılandığında devreye giren 112 arama modülü* |
+
+| 🌍 Çoklu Dil ve Asistan | 🔌 Donanım Kurulumu |
+| :---: | :---: |
+| <img src="screenshots/test3.jpeg" width="100%"> | <img src="screenshots/donanım.jpeg" width="100%"> |
+| *Türkçe/İngilizce dil desteği ve durum raporları* | *Breadboard olmadan NodeMCU ve DHT22 sensör bağlantısı* |
 
 ## 📄 Lisans
 Bu proje MIT Lisansı ile açık kaynak olarak sunulmuştur.
