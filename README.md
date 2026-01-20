@@ -152,7 +152,7 @@ pip install -r requirements.txt
 Tarayıcıdan http://localhost:8086 adresine giderek kurulumu tamamlayın, bir Organizasyon (Org) ve Kova (Bucket) oluşturun. Size verilen Token'ı kopyalayın.
 src/bridge.py dosyasındaki TOKEN ve ID alanlarını güncelleyin.
 
-<img src="screenshots/degisecekler.jpg" width="300">
+<img src="screenshots/degisecekler.png" width="300">
 
 > **⚠️ Önemli Not:** Windows'ta doğru COM portunu bulmak için Aygıt Yöneticisi -> Bağlantı Noktaları (COM & LPT) kısmına bakın. Sürücü olarak genellikle CH340 veya CP2102 görünür. Sürücü eğer mevcut değilse https://www.wch-ic.com/downloads/CH341SER_EXE.html adresinden sürücüyü indirebilirsiniz.
 
